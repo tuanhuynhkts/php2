@@ -30,7 +30,20 @@ Danh sách tỉnh thành
                                         <td>{{$province->id}}</td>
                                         <td>{{$province->name}}</td>
                                         <td>May 15, 2015</td>
-                                        <td><input type="submit" class="btn btn-sm btn-primary" value="Edit"></td>
+                                        <!-- <td><input type="submit" class="btn btn-sm btn-primary" value="Edit"></td>
+                                     -->
+                                        <td class="d-flex">
+                                            <!-- Nút Edit -->
+                                            <a href="{{ route('provinces.edit', $province->id) }}" class="btn btn-sm btn-primary me-2">Edit</a>
+
+                                            <!-- Nút Delete -->
+                                            <form action="{{ route('provinces.destroy', $province->id) }}" method="POST" onsubmit="return confirm('Bạn có chắc chắn muốn xóa tỉnh này?');">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                            </form>
+                                        </td>
+
                                     </tr>
                                     @endforeach
                                 </tbody>

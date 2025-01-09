@@ -15,7 +15,7 @@ Thêm mới tỉnh thànhthành
                 </div>
             </div>
             <div class="text-xs-right">
-                <button type="submit" class="btn btn-info text-white">Them moi</button>
+                <button type="submit" class="btn btn-info text-white">Thêm mới</button>
                 <button type="reset" class="btn btn-inverse">Cancel</button>
             </div>
         </form>
